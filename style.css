@@ -330,3 +330,11 @@ input:focus {
 label:has(input[type="radio"]:checked) {
     color: var(--clr-primary-a0);
 }
+
+ul {
+    list-style-type: none;
+}
+
+legend {
+    width: fit-content;
+}
