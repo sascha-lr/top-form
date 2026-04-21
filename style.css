@@ -308,6 +308,8 @@ input[type="radio"] {
     vertical-align: center;
     appearance: none;
     border-radius: 100%;
+    padding: 0;
+    height: 1rem;
     aspect-ratio: 1/1;
     margin-right: .5rem;
 }
