@@ -6,13 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playground</title>
     <link rel="stylesheet" href="./style.css">
+
+    <link href="./assets/fonts/inter-v20-latin-regular.woff2" type="font/woff2" rel="preload" as="font" crossorigin>
+    <link href="./assets/fonts/inter-v20-latin-600.woff2" type="font/woff2" rel="preload" as="font" crossorigin>
+    <link href="./assets/fonts/inter-v20-latin-600italic.woff2" type="font/woff2" rel="preload" as="font" crossorigin>
+
     <script src="./app.js" defer></script>
 </head>
 
 <body>
+
+    <div class="cover">
+        <div>
+            <h1>Matcha<span class="primary">Mood</span> Checkout</h1>
+            <p class="desc">Photo by <a href="https://unsplash.com/@haliewestphoto" rel="noopener noreferrer">Halie
+                    West</a>
+                on <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA"
+                    rel="noopener noreferrer">Unsplash</a></p>
+        </div>
+    </div>
+
     <form action="" method="post">
         <h1>Payment form</h1>
-        <p>Please complete all required <b>*</b> fields.</p>
+        <p>Please complete all required fields.</p>
         <section>
             <h2>Contact information</h2>
             <fieldset>
@@ -40,12 +56,12 @@
             </fieldset>
             <fieldset>
                 <legend>Personal Information</legend>
-                <label for="name">Name <b>*</b></label>
-                <input type="text" autocomplete="cc-name" id="name" name="username" required />
-                <label for="mail">Email <b>*</b></label>
-                <input type="email" autocomplete="email" id="mail" name="user-mail" required />
-                <label for="pwd">Password <b>*</b></label>
-                <input type="password" id="pwd" name="password" required />
+                <label for="name">Name</label>
+                <input type="text" autocomplete="cc-name" id="name" name="username" required>
+                <label for="mail">Email</label>
+                <input type="email" autocomplete="email" id="mail" name="user-mail" required>
+                <label for="pwd">Password</label>
+                <input type="password" id="pwd" name="password" required>
             </fieldset>
         </section>
         <section>
@@ -58,11 +74,10 @@
                     <option value="mc">MasterCard</option>
                     <option value="amex">American Express</option>
                 </select>
-                <label for="number">Card number <b>*</b></label>
+                <label for="number">Card number</label>
                 <input type="text" inputmode="numeric" autocomplete="cc-number" id="number"
-                    placeholder="0000 0000 0000 0000" name="card-number" required="required">
-                <label for="expiration">Expiration date <b>*</b>
-                </label>
+                    placeholder="0000 0000 0000 0000" name="card-number" required="required" pattern="[0-9]{16}">
+                <label for="expiration">Expiration date</label>
                 <input type="tel" id="expiration" autocomplete="cc-exp" name="expiration" required placeholder="MM/YY"
                     pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$">
             </fieldset>
